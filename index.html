@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepanshu Hair Studio | Premium Hair Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#c17a5f',
+                        secondary: '#3a2e26',
+                        accent: '#e8c4b8',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'pulse-slow': 'pulse 3s infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-balance {
+                text-wrap: balance;
+            }
+            .clip-path-hero {
+                clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            }
+            .clip-path-footer {
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+            }
+            .haircut-card:hover .haircut-img {
+                transform: scale(1.05);
+            }
+            .service-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-white text-secondary">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-serif font-bold text-primary">Deepanshu Hair Studio</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="#home" class="text-primary font-medium hover:text-secondary transition">Home</a>
+                        <a href="#services" class="text-secondary font-medium hover:text-primary transition">Services</a>
+                        <a href="#gallery" class="text-secondary font-medium hover:text-primary transition">Gallery</a>
+                        <a href="#pricing" class="text-secondary font-medium hover:text-primary transition">Pricing</a>
+                        <a href="#location" class="text-secondary font-medium hover:text-primary transition">Location</a>
+                        <a href="#contact" class="bg-primary text-white px-4 py-2 rounded-full hover:bg-secondary transition">Book Now</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-secondary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="clip-path-hero bg-gradient-to-r from-secondary to-primary pt-24 pb-32 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center justify-between">
+                <div class="md:w-1/2 animate-fade-in">
+                    <h1 class="text-4xl md:text-6xl font-serif font-bold mb-6">Premium Hair <br>Experiences</h1>
+                    <p class="text-xl mb-8 text-accent">Where style meets perfection. Our expert stylists create looks that complement your personality.</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-white text-primary px-6 py-3 rounded-full font-medium hover:bg-accent transition">Book Appointment</a>
+                        <a href="#services" class="border-2 border-white text-white px-6 py-3 rounded-full font-medium hover:bg-white hover:text-primary transition">Our Services</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 mt-10 md:mt-0 animate-slide-up">
+                    <div class="relative">
+                        <img src="https://lh3.googleusercontent.com/p/AF1QipNQjL1EHQbj_B37xmKaskqFfuiUDg-kKiRL8IsK=s680-w680-h510" alt="Hair Styling" class="rounded-lg shadow-2xl w-full max-w-lg mx-auto">
+                        <div class="absolute -bottom-6 -left-6 bg-accent p-4 rounded-lg shadow-lg hidden md:block">
+                            <p class="text-secondary font-bold">15+ Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Our Premium Services</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">We offer a wide range of hair and beauty services tailored to your needs</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Haircut Service -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=640&q=80" alt="Haircut" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Precision Haircuts</h3>
+                        <p class="text-gray-600 mb-4">Expert cuts tailored to your face shape and lifestyle, using the latest techniques.</p>
+                        <a href="#" class="text-primary font-medium hover:underline">Learn more →</a>
+                    </div>
+                </div>
+                
+                <!-- Coloring Service -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://i.pinimg.com/736x/c9/b6/ec/c9b6ecd5bab3b45683d31cfb50b74cae.jpg">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Professional Coloring</h3>
+                        <p class="text-gray-600 mb-4">From subtle highlights to bold transformations, we use premium color products.</p>
+                        <a href="#" class="text-primary font-medium hover:underline">Learn more →</a>
+                    </div>
+                </div>
+                
+                <!-- Facial Service -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=640&q=80" alt="Facial" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Luxury Facials</h3>
+                        <p class="text-gray-600 mb-4">Rejuvenate your skin with our customized facial treatments using organic products.</p>
+                        <a href="#" class="text-primary font-medium hover:underline">Learn more →</a>
+                    </div>
+                </div>
+                
+                <!-- Chemical Treatments -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=640&q=80" alt="Chemical Treatment" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Chemical Treatments</h3>
+                        <p class="text-gray-600 mb-4">Professional keratin, smoothing, and rebonding treatments for healthy, manageable hair.</p>
+                        <a href="#" class="text-primary font-medium hover:underline">Learn more →</a>
+                    </div>
+                </div>
+                
+                <!-- Bridal Package -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=640&q=80" alt="Bridal Package" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Bridal Packages</h3>
+                        <p class="text-gray-600 mb-4">Complete bridal hair and makeup services for your special day.</p>
+                        <a href="#" class="text-primary font-medium hover:underline">Learn more →</a>
+                    </div>
+                </div>
+                
+                <!-- Men's Grooming -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1595475884562-073c30d45670?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=640&q=80" alt="Men's Grooming" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Men's Grooming</h3>
+                        <p class="text-gray-600 mb-4">Premium haircuts, beard trims, and grooming services for gentlemen.</p>
+                        <a href="#" class="text-primary font-medium hover:underline">Learn more →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Our Work Gallery</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Browse through our collection of stunning transformations</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="haircut-card overflow-hidden rounded-lg shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=640&q=80" alt="Hair Style 1" class="haircut-img w-full h-64 object-cover transition duration-500">
+                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <span class="text-white font-medium">Bridal Updo</span>
+                    </div>
+                </div>
+                <div class="haircut-card overflow-hidden rounded-lg shadow-md group">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/jobportal-54e1e.appspot.com/o/free%2FWhatsApp%20Image%202025-04-23%20at%2000.01.36_e421a9f9.jpg?alt=media&token=fb295d2e-76a2-4412-8904-4cc20e8142c8" alt="Hair Style 2" class="haircut-img w-full h-64 object-cover transition duration-500">
+                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <span class="text-white font-medium">Balayage Highlights</span>
+                    </div>
+                </div>
+                <div class="haircut-card overflow-hidden rounded-lg shadow-md group">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipN9w5WnCM7DDYd1FCVAEDNBpM_-6_NlfzPla5Wx=s680-w680-h510" alt="Hair Style 3" class="haircut-img w-full h-64 object-cover transition duration-500">
+                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <span class="text-white font-medium">Men's Fade</span>
+                    </div>
+                </div>
+                <div class="haircut-card overflow-hidden rounded-lg shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=640&q=80" alt="Hair Style 4" class="haircut-img w-full h-64 object-cover transition duration-500">
+                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <span class="text-white font-medium">Keratin Treatment</span>
+                    </div>
+                </div>
+                <div class="haircut-card overflow-hidden rounded-lg shadow-md group">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipNQjL1EHQbj_B37xmKaskqFfuiUDg-kKiRL8IsK=s680-w680-h510" alt="Hair Style 5" class="haircut-img w-full h-64 object-cover transition duration-500">
+                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <span class="text-white font-medium">Vibrant Colors</span>
+                    </div>
+                </div>
+                <div class="haircut-card overflow-hidden rounded-lg shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=640&q=80" alt="Hair Style 6" class="haircut-img w-full h-64 object-cover transition duration-500">
+                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <span class="text-white font-medium">Skin Care</span>
+                    </div>
+                </div>
+                <div class="haircut-card overflow-hidden rounded-lg shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=640&q=80" alt="Hair Style 7" class="haircut-img w-full h-64 object-cover transition duration-500">
+                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <span class="text-white font-medium">Layered Cut</span>
+                    </div>
+                </div>
+                <div class="haircut-card overflow-hidden rounded-lg shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1595475884562-073c30d45670?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=640&q=80" alt="Hair Style 8" class="haircut-img w-full h-64 object-cover transition duration-500">
+                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <span class="text-white font-medium">Beard Styling</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-primary text-white px-6 py-3 rounded-full font-medium hover:bg-secondary transition">View Full Gallery</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Our Pricing</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Premium services at competitive prices</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Basic Package -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:border-primary transition">
+                    <div class="p-6 border-b border-gray-100">
+                        <h3 class="text-xl font-bold mb-2">Basic Package</h3>
+                        <p class="text-gray-600">Perfect for regular maintenance</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-4xl font-bold mb-4">₹799<span class="text-lg font-normal text-gray-500">/service</span></div>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                <span>Haircut & Styling</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                <span>Basic Shampoo</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                <span>Blow Dry</span>
+                            </li>
+                            <li class="flex items-center text-gray-400">
+                                <i class="fas fa-times mr-2"></i>
+                                <span>No Coloring</span>
+                            </li>
+                            <li class="flex items-center text-gray-400">
+                                <i class="fas fa-times mr-2"></i>
+                                <span>No Treatments</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block text-center bg-primary text-white px-4 py-3 rounded-full font-medium hover:bg-secondary transition">Book Now</a>
+                    </div>
+                </div>
+                
+                <!-- Premium Package -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-primary relative">
+                    <div class="absolute top-0 right-0 bg-primary text-white px-4 py-1 text-sm font-medium">Most Popular</div>
+                    <div class="p-6 border-b border-gray-100">
+                        <h3 class="text-xl font-bold mb-2">Premium Package</h3>
+                        <p class="text-gray-600">Our best value package</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-4xl font-bold mb-4">₹1,499<span class="text-lg font-normal text-gray-500">/service</span></div>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                <span>Haircut & Styling</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                <span>Premium Shampoo</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                <span>Blow Dry & Finish</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                <span>Basic Highlights</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                <span>Scalp Massage</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block text-center bg-primary text-white px-4 py-3 rounded-full font-medium hover:bg-secondary transition">Book Now</a>
+                    </div>
+                </div>
+                
+                <!-- Luxury Package -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:border-primary transition">
+                    <div class="p-6 border-b border-gray-100">
+                        <h3 class="text-xl font-bold mb-2">Luxury Package</h3>
+                        <p class="text-gray-600">The ultimate hair experience</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-4xl font-bold mb-4">₹2,999<span class="text-lg font-normal text-gray-500">/service</span></div>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                <span>Haircut & Styling</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                <span>Luxury Shampoo</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                <span>Professional Blowout</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                <span>Full Coloring</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                <span>Keratin Treatment</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block text-center bg-primary text-white px-4 py-3 rounded-full font-medium hover:bg-secondary transition">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-accent p-8 rounded-xl">
+                <h3 class="text-xl font-bold mb-4">Additional Services</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <h4 class="font-bold mb-2">Hair Coloring</h4>
+                        <p class="text-gray-600 mb-2">Starting from ₹1,200</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <h4 class="font-bold mb-2">Keratin Treatment</h4>
+                        <p class="text-gray-600 mb-2">Starting from ₹3,500</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <h4 class="font-bold mb-2">Facial Treatments</h4>
+                        <p class="text-gray-600 mb-2">Starting from ₹1,500</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <h4 class="font-bold mb-2">Bridal Packages</h4>
+                        <p class="text-gray-600 mb-2">Starting from ₹5,000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">Our Location</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Deepanshu Hair Studio</h3>
+                            <p class="text-gray-600">Gurmehar colony gate, near preem hotel, <br> Mandideep, Madhya Pradesh 462046</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">Hours</h4>
+                            <p class="text-gray-600">Monday - Friday: 9:00 AM - 8:00 PM<br>Saturday - Sunday: 10:00 AM - 6:00 PM</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">Contact</h4>
+                            <p class="text-gray-600">Phone: +91 77709 15787<br>Email: deepanshu625@gmail.com</p>
+                        </div>
+                        <div class="pt-4">
+                            <a href="https://maps.google.com" target="_blank" class="inline-flex items-center bg-primary text-white px-6 py-3 rounded-full font-medium hover:bg-secondary transition">
+                                <i class="fas fa-map-marker-alt mr-2"></i> Get Directions
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-10">
+                    <div class="rounded-xl overflow-hidden shadow-lg h-96">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.891902572128!2d77.50265907430419!3d23.096692113560053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c47f0f773e6fb%3A0x40bd9d08c8f9ec7f!2sDeepanshu%20Hair%20Studio%20%2F%20Hair%20Cuts%20%2F%20Hair%20Style!5e1!3m2!1sen!2sin!4v1745346110243!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Client Testimonials</h2>
+                <p class="text-accent max-w-2xl mx-auto">Hear what our clients say about their experiences</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white/10 p-8 rounded-xl backdrop-blur-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="italic mb-6">"Deepanshu gave me the best haircut I've ever had! He understood exactly what I wanted and delivered beyond my expectations."</p>
+                    <div class="flex items-center">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/jobportal-54e1e.appspot.com/o/free%2FScreenshot%202025-04-23%20001618.png?alt=media&token=459880f4-43a2-4af2-b87e-e57c6007045e" alt="Priya Sharma" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Yogesh Giri</h4>
+                            <p class="text-accent text-sm">Regular Client</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white/10 p-8 rounded-xl backdrop-blur-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="italic mb-6">"The keratin treatment transformed my frizzy hair into smooth, manageable locks. Worth every rupee!"</p>
+                    <div class="flex items-center">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/jobportal-54e1e.appspot.com/o/free%2FScreenshot%202025-04-23%20001805.png?alt=media&token=6511325e-9bf0-4281-b271-18631c2ce834" alt="Anjali Patel" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Nikhil Rajak</h4>
+                            <p class="text-accent text-sm">First-time Client</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white/10 p-8 rounded-xl backdrop-blur-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="italic mb-6">"I've been coming here for years. The team knows exactly how to keep my beard looking sharp and my haircut fresh."</p>
+                    <div class="flex items-center">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/jobportal-54e1e.appspot.com/o/free%2FScreenshot%202025-04-23%20001946.png?alt=media&token=7fc452aa-fde2-4801-a504-efe206a297d9" alt="Rahul Verma" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">GullU Bhai</h4>
+                            <p class="text-accent text-sm">Long-time Client</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">Book Your Appointment</h2>
+                    <p class="text-gray-600 mb-8">Ready to transform your look? Fill out the form and we'll get back to you shortly to confirm your appointment.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-primary/10 p-3 rounded-full text-primary">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold">Call Us</h4>
+                                <p class="text-gray-600">+91 77709 15787</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-primary/10 p-3 rounded-full text-primary">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold">Email Us</h4>
+                                <p class="text-gray-600">deepanshu625@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-primary/10 p-3 rounded-full text-primary">
+                                <i class="fas fa-comment-alt"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold">Chat With Us</h4>
+                                <p class="text-gray-600">WhatsApp: +91 77709 15787</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 md:pl-10">
+                    <form class="bg-gray-50 p-8 rounded-xl shadow-md">
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="service" class="block text-gray-700 font-medium mb-2">Service</label>
+                                <select id="service" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                    <option>Select a service</option>
+                                    <option>Haircut & Styling</option>
+                                    <option>Hair Coloring</option>
+                                    <option>Keratin Treatment</option>
+                                    <option>Facial Treatment</option>
+                                    <option>Bridal Package</option>
+                                    <option>Men's Grooming</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="date" class="block text-gray-700 font-medium mb-2">Preferred Date</label>
+                                <input type="date" id="date" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Special Requests</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-primary text-white px-6 py-4 rounded-full font-medium hover:bg-secondary transition">Book Appointment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-secondary text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl md:text-3xl font-serif font-bold mb-4">Join Our Beauty Community</h2>
+            <p class="text-accent mb-8">Subscribe to receive exclusive offers, styling tips, and updates on new services.</p>
+            
+            <form class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-l-lg focus:outline-none text-gray-800">
+                <button type="submit" class="bg-primary text-white px-6 py-3 rounded-r-lg font-medium hover:bg-accent hover:text-secondary transition">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="clip-path-footer bg-primary text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <div>
+                    <h3 class="text-xl font-serif font-bold mb-6">Deepanshu Hair Studio</h3>
+                    <p class="mb-6 text-accent">Premium hair and beauty services tailored to enhance your natural beauty.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-white/10 p-2 rounded-full hover:bg-white/20 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-white/10 p-2 rounded-full hover:bg-white/20 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-white/10 p-2 rounded-full hover:bg-white/20 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-white/10 p-2 rounded-full hover:bg-white/20 transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-accent hover:text-white transition">Home</a></li>
+                        <li><a href="#services" class="text-accent hover:text-white transition">Services</a></li>
+                        <li><a href="#gallery" class="text-accent hover:text-white transition">Gallery</a></li>
+                        <li><a href="#pricing" class="text-accent hover:text-white transition">Pricing</a></li>
+                        <li><a href="#location" class="text-accent hover:text-white transition">Location</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-accent hover:text-white transition">Haircuts & Styling</a></li>
+                        <li><a href="#" class="text-accent hover:text-white transition">Hair Coloring</a></li>
+                        <li><a href="#" class="text-accent hover:text-white transition">Keratin Treatments</a></li>
+                        <li><a href="#" class="text-accent hover:text-white transition">Facial Treatments</a></li>
+                        <li><a href="#" class="text-accent hover:text-white transition">Bridal Packages</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-6">Contact Us</h4>
+                    <ul class="space-y-3 text-accent">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>123 Beauty Street, Fashion District<br>New Delhi, DL 110001</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3"></i>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>info@deepanshuhairstudio.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-accent mb-4 md:mb-0">© 2023 Deepanshu Hair Studio. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-accent hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="text-accent hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="fixed bottom-6 right-6 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-secondary transition opacity-0 invisible group-hover:opacity-100 group-hover:visible" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script>
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Animation on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.animate-fade-in, .animate-slide-up');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
+</body>
+</html>
